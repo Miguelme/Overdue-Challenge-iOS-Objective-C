@@ -29,24 +29,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    // Prueba de Local Notification
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    
-    // debe de activarse dentro de 5 segundos
-    notification.fireDate = [[NSDate alloc] initWithTimeIntervalSinceNow:15];
-    
-    // mensaje que saldrá en la alerta
-    notification.alertBody = @"Mensaje de Alert!";
-    
-    // sonido por defecto
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    
-    // título del botón
-    notification.alertAction = @"Ahora te lo cuento";
-    notification.hasAction = YES;
-    
-    // activa la notificación
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+
 }
 
 - (void)didReceiveMemoryWarning {
